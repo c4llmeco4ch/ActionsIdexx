@@ -1,0 +1,20 @@
+name: Hello World Docker Checker
+
+on:
+  push:
+    paths: [ hello-world-docker-action/** ]
+  workflow_dispatch:
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github/checkout@v4
+
+      - id: hello-world
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: 'friend'
+
+      - name: Provide output
+        run: echo "This was run at ${{ steps.hello-world.outputs.time }}
