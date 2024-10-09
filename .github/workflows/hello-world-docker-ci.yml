@@ -9,7 +9,7 @@ jobs:
   run-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: github/checkout@v4
+      - uses: actions/checkout@v4
 
       - id: hello-world
         uses: ./hello-world-docker-action
