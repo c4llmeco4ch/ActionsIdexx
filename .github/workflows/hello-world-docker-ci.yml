@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - id: hello-world
+      - name: Run local action
+        id: hello-world
         uses: ./hello-world-docker-action
         with:
           who-to-greet: 'friend'
