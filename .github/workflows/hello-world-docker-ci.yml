@@ -17,4 +17,4 @@ jobs:
           who-to-greet: 'friend'
 
       - name: Provide output
-        run: echo "This was run at ${{ steps.hello-world.outputs.time }}
+        run: echo "This was run at ${{ steps.hello-world.outputs.time }}"
